@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content%}
+<h2 id = surname-for-writer>{{ template_name }} {{ template_surname }}:  <a href="https://it.wikipedia.org/wiki/{{template_name}}_{{template_surname}}" target="_blank" id="more_informations"}>(wikipedia <i class="fa fa-external-link" aria-hidden="true"></i> )</a></h2>
+{% for quote in template_quotes%}
+<ul>
+    <li><p id = quote-for-writer>{{ quote.quote }}</p></li>
+</ul>
+{% endfor %}
+{% endblock %}

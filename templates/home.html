@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div id= "random-sentence">
+    <p>{{ template_quote.quote}}</p><cite> ({{template_quote.name}} {{template_quote.surname}}) </cite><a href="{{ url_for('home')}}"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+</div>
+<div id = "content">
+    <div id = "authors">
+        <h2>Authors:</h2>
+        {% for citation in template_citations %}
+        <ul>
+            <li><a href= "{{url_for('writer', writer_surname = citation.surname, writer_name = citation.name)}}">{{citation.name}} {{ citation.surname }}  </a></li>
+        </ul>
+        {% endfor %}
+    </div>
+    <div id = "images">
+        <img src = "{{template_image.image}}">
+        <div  id = "bio"><p>{{ template_image.bio }} <a href = "{{url_for('home')}}"><i class="fa fa-refresh" aria-hidden="true"></i></a></p></div>
+    </div>
+</div>
+{% endblock %}

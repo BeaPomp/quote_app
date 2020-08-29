@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel= "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id = "page">
+            <div id = "header">
+                <div id = "nav">
+                    <ul>
+                        <li><a href ="{{ url_for('home')}}" >Home</a></li>
+                        <li><a href = "{{ url_for('archive')}}">Archive</a></li>
+                        <li><a href = "{{ url_for('update')}}">Update</a></li>
+                        <li><a href= "{{ url_for('add')}}">Add</a></li>
+                        <li><a href= "{{ url_for('login')}}">Login</a></li>
+                        <li><a href= "{{ url_for('register')}}">Register</a></li>
+                        <li><a href= "{{ url_for('logout')}}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id = "content">{% block content %}{% endblock %}</div>
+            <footer><ul>
+                <li><a href = "https://www.instagram.com/?hl=it" target = "_blank"><i class="fa fa-instagram" aria-hidden: "true"></i></a></li>
+                <li><a href = "https://www.pinterest.it/" target = "_blank"><i class="fa fa-pinterest" aria-hidden: "true"></i></a></li>
+                <li><a href = "https://it-it.facebook.com/" target = "_bank"><i class="fa fa-facebook" aria-hidden: "true"></i></a></li>
+                <li><a href = "https://twitter.com/twitter" target = "_blank"><i class="fa fa-twitter" aria-hidden: "true"></i></a></li>
+            </ul></footer>
+        </div>
+    </body>
+</html>

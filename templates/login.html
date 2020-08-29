@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div id = "form">
+    <form method = "POST">
+        <p>{{ template_form.email.label(class = "form-label") }}
+            {{ template_form.email(class = "form-field", id = "email", placeholder = "Enter username") }}
+        </p>
+        <p>{{ template_form.password.label(class = "form-label") }}
+            {{ template_form.password(class = "form-field", id = "password", placeholder = "Enter password") }}
+        </p>
+        <p>{{ template_form.remember() }} {{ template_form.remember.label(class= "remember-label")}}</p>
+        <p>{{ template_form.submit(class = "submit") }}</p>
+    </form>
+</div>
+{% endblock %}

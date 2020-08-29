@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div id = "form">
+    <form method = "POST">
+        {{template_form.hidden_tag()}}
+        <p>{{template_form.username.label(class= "form-label")}}
+            {{template_form.username(class = "form-field", id = "username", placeholder = "Enter an username")}}
+        </p>
+        <p>{{template_form.email.label(class = "form-label")}}
+            {{template_form.email(class = "form-field", id = "email", placeholder = "Enter an email")}}
+        </p>
+        <p>{{template_form.password.label(class = "form-label")}}
+            {{template_form.password(class = "form-field", id = "password", placeholder = "Enter a password")}}
+        </p>
+        <p>{{template_form.password2.label(class = "form-label")}}
+            {{template_form.password2(class = "form-field", id = "password", placeholder = "Repeat the password")}}
+        </p>
+        <p>{{template_form.submit(class = "submit")}}</p>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{% block content%}
+<p id = "compile">Compile this form to add an image and a small biography to the home page</p>
+<div id = "form">
+    <form method = "POST">
+        {{template_form.hidden_tag()}}
+        <p>{{ template_form.image.label( class = "form-label")}}
+            {{template_form.image(class = "form-field", id = "image", placeholder = "Enter image link")}}
+        <p>{{ template_form.bio.label(class = "form-label")}}
+            {{ template_form.bio(class = "form-field", id = "bio", placeholder = "Enter the biography (max 400)")}}
+        <p>{{ template_form.submit(class = "submit")}}</p>
+        </p>
+        </p>
+    </form>
+</div>
+{% endblock %}

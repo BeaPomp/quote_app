@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<p id = "compile">Compile this form to add a quote to the archive</p>
+<div id = "form">
+   <form method="POST">
+    {{ template_form.hidden_tag() }}
+    <p>{{ template_form.name.label(class= "form-label") }}
+    {{ template_form.name(class = "form-field", id = "name", placeholder = "Enter writer's name (max 20)") }}</p>
+    <p>{{ template_form.surname.label(class = "form-label") }}
+    {{ template_form.surname(class = "form-field", id = "surname", placeholder = "Enter writer's surname (max 20)") }}</p>
+    <p>{{ template_form.quote.label(class = "form-label")}}
+    {{ template_form.quote(class = "form-field", id = "quote", placeholder = "Enter the quote (max 200)") }}</p>
+    <p>{{ template_form.submit( class = "submit") }}</p>
+  </form>
+</div>
+{% endblock %}

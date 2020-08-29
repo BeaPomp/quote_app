@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content%}
+{% for citation in template_citations %}
+<ul>
+   <li> 
+       <div id = quote>
+           <p>{{ citation.quote}}</p><cite>{{ citation.name}} {{citation.surname}}</cite>
+        </div>
+    </li>
+</ul>
+{% endfor %}
+{% endblock %}
